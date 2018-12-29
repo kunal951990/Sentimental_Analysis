@@ -21,8 +21,11 @@ python Sentimental_Analysis.py
 Printed out each tweet and saved each Tweet to a CSV file with an associated index of 'Tweet' and 'Sensation'. 
 Created Bag of Words to create traing set and test set in 'Bag_Of_Word.py'.
 
-##The Callenge is :
+##The Callenge is was:
 The label should be either 'Positive' or 'Negative'. You can define the sentiment polarity threshold yourself, whatever you think constitutes a tweet being positive/negative. Push your code repository to github then post it in the comments. I'll give the winner a shoutout a week from now!
+
+##How Challenge is handled:
+While checking sentiment of tweet condition of if else is added so that before writing to csv, it will chnage the replace the value of sentiment by Positive, Negative and Neutral.
 
 ##Credits
 
