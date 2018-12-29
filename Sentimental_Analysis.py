@@ -36,13 +36,20 @@ csvWriter = csv.writer(csvFile)
 public_tweets = api.search('Subject')
 
 #dataframe = pd.DataFrame
+threshold = 0
 
 for tweet in public_tweets:
     print(tweet.text)
     analysis =TextBlob(tweet.text)
-    csvWriter.writerow([tweet.text.encode('utf-8'),analysis.polarity])
     print(analysis)
     print(analysis.polarity)
+    If analysis.polarity > threshold:
+        analysis.polarity = 'Positive'
+    elif analysis.polarity < threshold:
+        analysis.polarity = 'Negative'
+    else:
+        analysis.polarity = 'Neutral'
+    csvWriter.writerow([tweet.text.encode('utf-8'),analysis.polarity])
     
 csvFile.close()
 
